@@ -1,6 +1,0 @@
-export cn.huizhang43.pro.aitest.chat.dao.AiSession
-
-input AiSessionInput{
-    id?
-    name
-}
