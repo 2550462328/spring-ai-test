@@ -192,16 +192,6 @@
 			<artifactId>guava</artifactId>
 			<version>33.3.0-jre</version>
 		</dependency>
-		<dependency>
-			<groupId>io.modelcontextprotocol.sdk</groupId>
-			<artifactId>mcp</artifactId>
-			<version>0.8.1</version>
-		</dependency>
-		<dependency>
-			<groupId>io.modelcontextprotocol.sdk</groupId>
-			<artifactId>mcp-spring-webmvc</artifactId>
-			<version>0.8.1</version>
-		</dependency>
 	</dependencies>
 
 	<repositories>
