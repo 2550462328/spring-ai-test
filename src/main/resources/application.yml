@@ -1,3 +1,5 @@
+sever:
+  port: 8081
 spring:
   ai:
     dashscope:
@@ -5,13 +7,7 @@ spring:
       api-key: sk-944809d73aa442a784fe7da2c15730d1
     mcp:
       client:
-        stdio:
-          # 指定MCP服务器配置文件路径（推荐）
-          servers-configuration: classpath:/mcp-servers-config.json
-          # 直接配置示例，和上边的配制二选一
-          # connections:
-          #   server1:
-          #     command: java
-          #     args:
-          #       - -jar
-          #       - /path/to/your/mcp-server.jar
+        sse:
+          connections:
+            server1:
+              url: http://localhost:8080  #服务地址
