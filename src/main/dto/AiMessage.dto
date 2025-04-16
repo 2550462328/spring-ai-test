@@ -1,0 +1,6 @@
+export cn.huizhang43.pro.aitest.chat.dao.AiMessage
+
+input AiMessageInput{
+    #allScalars(AiMessage)
+    id(session)
+}

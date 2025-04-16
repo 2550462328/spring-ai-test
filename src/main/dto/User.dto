@@ -1,0 +1,10 @@
+export cn.huizhang43.pro.aitest.chat.dao.User
+
+input UserLoginInput{
+    phone
+    password
+}
+input UserRegisterInput{
+    phone
+    password
+}
