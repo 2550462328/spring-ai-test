@@ -2,7 +2,7 @@ spring:
   ai:
     dashscope:
       # 配置通义千问API密钥
-      api-key: ${DASH_SCOPE_API_KEY}
+      api-key: sk-944809d73aa442a784fe7da2c15730d1
     mcp:
       client:
         stdio:
