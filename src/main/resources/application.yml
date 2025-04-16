@@ -1,11 +1,17 @@
 spring:
-  main:
-#    web-application-type: none  # 必须禁用web应用类型
-    banner-mode: off           # 禁用banner
   ai:
+    dashscope:
+      # 配置通义千问API密钥
+      api-key: ${DASH_SCOPE_API_KEY}
     mcp:
-      server:
-#        stdio: true            # 启用stdio模式
-        name: my-weather-server # 服务器名称
-        version: 0.0.1         # 服务器版本
-  
+      client:
+        stdio:
+          # 指定MCP服务器配置文件路径（推荐）
+          servers-configuration: classpath:/mcp-servers-config.json
+          # 直接配置示例，和上边的配制二选一
+          # connections:
+          #   server1:
+          #     command: java
+          #     args:
+          #       - -jar
+          #       - /path/to/your/mcp-server.jar
