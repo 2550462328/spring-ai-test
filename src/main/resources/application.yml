@@ -10,4 +10,4 @@ spring:
         sse:
           connections:
             server1:
-              url: http://localhost:8080  #服务地址
+              url: https://opddev.iflyhealth.com/mcptest  #服务地址
