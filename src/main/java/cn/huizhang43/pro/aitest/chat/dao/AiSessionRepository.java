@@ -1,0 +1,21 @@
+package cn.huizhang43.pro.aitest.chat.dao;
+
+import cn.dev33.satoken.stp.StpUtil;
+import org.babyfish.jimmer.spring.repository.JRepository;
+
+import java.util.List;
+
+public interface AiSessionRepository extends JRepository<AiSession, String> {
+    AiSessionTable t = AiSessionTable.$;
+    AiSessionFetcher FETCHER = AiSessionFetcher.$.allScalarFields()
+            .messages(AiMessageFetcher.$.allScalarFields().sessionId());
+
+    default List<AiSession> findByUser() {
+        List<AiSession> execute = sql().createQuery(t)
+                .where(t.creatorId().eq(StpUtil.getLoginIdAsString()))
+                .select(t.fetch(FETCHER))
+                .execute();
+        
+        return execute;
+    }
+}
